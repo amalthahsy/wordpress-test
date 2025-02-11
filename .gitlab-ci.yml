@@ -9,6 +9,6 @@ deploy_to_server:
     - main
   script:
     - echo "Deploying to web server..."
-    - rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./ user@13.60.57.208:/var/www/html/wordpress
+    - rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./ root@13.60.57.208:/var/www/html/wordpress
   after_script:
     - echo "Cleaning up..."
