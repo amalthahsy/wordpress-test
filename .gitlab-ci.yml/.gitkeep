@@ -12,3 +12,7 @@ deploy_to_server:
     - rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./ user@13.60.57.208:/var/www/html/wordpress
   after_script:
     - echo "Cleaning up..."
+cache:
+  paths:
+    - wp-content/themes/
+    - wp-content/plugins/
