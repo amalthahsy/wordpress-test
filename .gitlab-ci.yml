@@ -1,0 +1,14 @@
+stages:
+  - deploy
+
+deploy_to_server:
+  stage: deploy
+  tags:
+    - wordpress
+  only:
+    - main
+  script:
+    - echo "Deploying to web server..."
+    - rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./ user@13.60.57.208:/var/www/html/wordpress
+  after_script:
+    - echo "Cleaning up..."
