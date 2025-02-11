@@ -1,0 +1,4 @@
+# Ignore WordPress core files (customize as needed)
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
